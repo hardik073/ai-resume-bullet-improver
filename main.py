@@ -5,8 +5,13 @@ client = OpenAI(api_key=os.getenv("OPEN_API_KEY"))
 
 def improve_resume_bullet(bullet):
     prompt = f"""
-    Rewrite the following resume bullet to make it more impactful,
-    professional, and achievement-oriented:
+    You are a professional resume coach.
+
+    Rewrite the following resume bullet point to:
+    - Be achievement-oriented
+    - Include measurable impact if possible
+    - Use strong action verbs
+    - Keep it concise one liner
 
     {bullet}
     """
